@@ -1,17 +1,17 @@
-# 中文版 README.zh1.md
+# 中文版 README.zh2.md
 
 ---
 
-# FastAPI MongoDB 待办事项清单
+# FastAPI MongoDB 待办事项列表
 
-## 前置要求
+## 前置条件
 
-1. FastAPI 基础知识
+1. 具备 FastAPI 基础知识
 2. 已安装 Python 
-3. 已安装 Mongodb 社区版服务器
+3. 已安装 MongoDB 社区服务器
 
 
-## 安装依赖
+## 安装依赖项
 
 1. fastAPI
 2. uvicorn
@@ -36,7 +36,7 @@ app = FastAPI()
 
 ## 编辑 database.py
 
-创建一个名为 database.py 的文件，并添加以下内容
+创建一个名为 database.py 的文件，并在其中添加以下内容
 
 ```python
 from pymongo import MongoClient
@@ -48,9 +48,10 @@ db = client.todo_app
 collection_name = db["todos_app"]
 ```
 
-**注意： `"mongodb://localhost:27017/mydb**"` 是可选的，因为 MongoClient 默认会连接这个端口和路径。**
+**注意： `"mongodb://localhost:27017/mydb**"` 是可选的，因为默认情况下 MongoClient 会连接到这个端口和路径。**
 
-如果你想使用 Atlas 或其他在线 MongoDB 平台，请将集群的 URL 替换为 MongoDB 客户端实例化时使用的参数。
+如果你想使用 Atlas 或在线 MongoDB 平台，请将集群的 URL 替换 MongoDB 客户端实例化时使用的参数
+
 
 ## 创建 todos_* 文件
 
@@ -98,7 +99,7 @@ from bson import ObjectId
 
 todo_api_router = APIRouter()
 
-# 查询
+# 检索
 @todo_api_router.get("/")
 async def get_todos():
     todos = todos_serializer(collection_name.find())
@@ -139,7 +140,7 @@ async def delete_todo(id: str):
 
 ---
 
-# 英文版的README.zh1.md
+# 英文版的README.zh2.md
 
 ---
 
