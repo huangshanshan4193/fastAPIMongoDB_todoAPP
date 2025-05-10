@@ -1,4 +1,4 @@
-# 中文版 README.md
+# 中文版 README.zh1.md
 
 ---
 
@@ -139,7 +139,7 @@ async def delete_todo(id: str):
 
 ---
 
-# 英文版的README.md
+# 英文版的README.zh1.md
 
 ---
 
